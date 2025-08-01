@@ -1,0 +1,23 @@
+{
+  "name": "msfs-sdk-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for MSFS SDK documentation access",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "cheerio": "^1.0.0-rc.12",
+    "node-fetch": "^3.3.0",
+    "puppeteer": "^21.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": ["mcp", "msfs", "sdk", "documentation"]
+}
