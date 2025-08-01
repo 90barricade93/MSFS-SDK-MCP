@@ -1,85 +1,93 @@
 # MSFS SDK MCP Server
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Node Version](https://img.shields.io/badge/node-%3E=18.0-blue.svg)](https://nodejs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18.0+-green?style=flat-square&logo=node.js)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![MCP](https://img.shields.io/badge/MCP-Compatible-purple?style=flat-square)](https://modelcontextprotocol.io/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+[![Build](https://img.shields.io/badge/Build-Passing-brightgreen?style=flat-square)](https://github.com)
 
-A Model Context Protocol (MCP) server for fast, structured access to the Microsoft Flight Simulator SDK documentation via natural language and structured queries.
+A modern, performant MCP server for fast, structured access to Microsoft Flight Simulator SDK documentation via natural language and structured queries.
 
----
+## 🚀 Features
 
-## Features
+- ⚡️ **Real-time documentation search** in the official MSFS SDK documentation
+- 📚 **Multiple search categories**: contents, index, glossary, all
+- 🧠 **Natural language processing**: queries like "Search livery op msfs sdk"
+- 📊 **Structured results**: titles, URLs, descriptions, categories
+- 📄 **Detailed content retrieval** from specific documentation pages
+- 🔌 **Full MCP compatibility** with AI assistants and tools
+- 💾 **Embedded data**: no external files needed
+- 🛡️ **Robust error handling** and logging
 
-- **Real-time documentation search** on the official MSFS SDK documentation
-- **Multiple search categories**: contents, index, glossary, all
-- **Natural language processing**: queries like "Search livery op msfs sdk"
-- **Structured results**: titles, URLs, descriptions, categories
-- **Detailed content retrieval** from specific documentation pages
-- **Full MCP compatibility** with AI assistants and tools
+## 🛠️ Tech Stack
 
-## Installation
+- **Runtime:** Node.js 18+
+- **Language:** TypeScript 5.0
+- **Framework:** Model Context Protocol (MCP)
+- **HTTP Client:** node-fetch
+- **HTML Parser:** Cheerio
+- **Browser Automation:** Puppeteer (optional)
+- **Build Tool:** TypeScript Compiler
 
-### Requirements
+## 📋 Requirements
 
-- Node.js 18+
-- npm (or yarn)
+- Node.js 18.x or higher
+- npm 8.x or higher
+- TypeScript 5.x
 
-### Setup
+## 🚀 Setup
 
-1. Download or clone this project:
+1. **Clone the repository:**
 
     ```bash
-    # If you have a git repository:
-    git clone <your-repository-url>
+    git clone https://github.com/yourusername/msfs-sdk-mcp.git
     cd msfs-sdk-mcp
-    
-    # Or download and extract the project files
     ```
 
-2. Install dependencies:
+2. **Install dependencies:**
 
     ```bash
     npm install
     ```
 
-3. Build the project:
+3. **Build the project:**
 
     ```bash
     npm run build
-    ```
+      ```
 
-4. Start the server:
+4. **Start the server:**
 
     ```bash
     npm start
     ```
 
-## Usage
+## 🔧 Available Tools
 
-### Available tools
+| Tool | Description | Parameters |
+|------|-------------|------------|
+| `search_msfs_docs` | 🔍 Search MSFS SDK documentation | `query`, `category`, `limit` |
+| `get_doc_content` | 📄 Retrieve detailed content | `url`, `section` |
+| `list_categories` | 📚 Show all search categories | - |
+| `list_category_items` | 📋 List items per category | `category` |
+| `natural_language_query` | 🧠 Natural language queries | `query` |
 
-- **search_msfs_docs**: Search the MSFS SDK documentation
-- **get_doc_content**: Retrieve detailed content from a documentation page
-- **list_categories**: Show all search categories
-- **list_category_items**: List all items within a specific category (index, contents, glossary)
-- **natural_language_query**: Execute natural language queries
+### 🏷️ Search Categories
 
-See the “API Reference” section below for example API calls.
+- `contents` - 📖 Main documentation content
+- `index` - 📇 Documentation index entries  
+- `glossary` - 📚 Technical terms and definitions
+- `all` - 🌐 Search across all categories (default: index)
 
-### Search categories
-
-- `contents`: Main documentation content
-- `index`: Documentation index entries
-- `glossary`: Technical terms and definitions
-- `all`: Search across all categories (default: index)
-
-## Integration with AI assistants
+## 🔌 Integration with AI Assistants
 
 This server works with MCP-compatible AI assistants such as:
 
-- Claude Desktop
-- Windsurf IDE
+- 🤖 **Claude Desktop** - Official MCP support
+- 🌊 **Windsurf IDE** - Built-in MCP integration
+- 🔧 **Other MCP clients** - All MCP-compatible tools
 
-Configuration example:
+### ⚙️ Configuration Example
 
 ```json
 {
@@ -92,26 +100,36 @@ Configuration example:
 }
 ```
 
-## Project structure
+## 📁 Project Structure
 
 ```plaintext
-src/
-├── index.ts                    # Main server implementation
-└── services/
-    ├── documentationService.ts # Documentation search logic
-    └── naturalLanguageService.ts # Natural language processing
+msfs-sdk-mcp/
+├── 📄 package.json             # Dependencies and scripts
+├── 📄 tsconfig.json            # TypeScript configuration
+├── 📄 README.md               # Project documentation
+├── 📄 LICENSE                 # MIT License
+├── 📂 src/
+│   ├── 📄 index.ts            # 🚀 Main MCP server
+│   └── 📂 services/
+│       ├── 📄 documentationService.ts  # 🔍 Search logic
+│       └── 📄 naturalLanguageService.ts # 🧠 NLP processing
+└── 📂 dist/                   # 🏗️ Compiled JavaScript
 ```
 
-## Development
+## 🧪 Development & Scripts
 
-- Build: `npm run build`
-- Development mode: `npm run dev`
+| Script | Description | Command |
+|--------|-------------|----------|
+| 🏗️ **Build** | Compile TypeScript | `npm run build` |
+| 👀 **Dev** | Watch mode development | `npm run dev` |
+| 🚀 **Start** | Start MCP server | `npm start` |
+| 🔍 **Type Check** | TypeScript validation | `npx tsc --noEmit` |
 
-## API Reference
+## 📚 API Reference
 
-### Tool Examples
+### 📈 Tool Examples
 
-#### search_msfs_docs
+#### 🔍 search_msfs_docs
 
 ```json
 {
@@ -124,7 +142,7 @@ src/
 }
 ```
 
-#### list_category_items
+#### 📋 list_category_items
 
 ```json
 {
@@ -135,7 +153,7 @@ src/
 }
 ```
 
-#### get_doc_content
+#### 📄 get_doc_content
 
 ```json
 {
@@ -147,16 +165,18 @@ src/
 }
 ```
 
-### Search URL format
+### 🌐 Search URL Format
 
 ```plaintext
 https://docs.flightsimulator.com/html/Introduction/Introduction.htm?rhsearch={query}&agt={category}
 ```
 
-- `{query}`: search term (URL-encoded)
-- `{category}`: optional category (`index`, `glossary`, or empty for contents)
+**Parameters:**
 
-### Response format
+- `{query}` - 🔍 Search term (URL-encoded)
+- `{category}` - 🏷️ Optional category (`index`, `glossary`, or empty for contents)
+
+### 📊 Response Format
 
 ```json
 {
@@ -169,39 +189,57 @@ https://docs.flightsimulator.com/html/Introduction/Introduction.htm?rhsearch={qu
 }
 ```
 
-## Contributing
+## 🤝 Contributing
 
-1. Fork this repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Implement and test your changes
-4. Commit: `git commit -am 'Add new feature'`
-5. Push: `git push origin feature-name`
-6. Open a pull request
+1. 🍴 **Fork** this repository
+2. 🌱 **Create** a feature branch: `git checkout -b feature-name`
+3. ✨ **Implement** and test your changes
+4. 📝 **Commit** with clear message: `git commit -am 'Add new feature'`
+5. 🚀 **Push** to your branch: `git push origin feature-name`
+6. 📩 **Open** a Pull Request
 
-## License
+### 📅 Commit Convention
 
-MIT License – see the [LICENSE file](./LICENSE) for details.
+- `feat:` - New features
+- `fix:` - Bug fixes
+- `docs:` - Documentation updates
+- `refactor:` - Code refactoring
+- `test:` - Test additions
 
-## Support
+## 📄 License
 
-- Check the [Issues](../../issues)
-- Consult the official MSFS SDK documentation
-- New issue? Please provide clear information
+**MIT License** – See [LICENSE](./LICENSE) file for details.
 
-## Changelog
+## 📞 Support & Contact
 
-### v1.0.0
+- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/msfs-sdk-mcp/issues)
+- 📚 **MSFS SDK Docs**: [Official documentation](https://docs.flightsimulator.com)
+- ❓ **New issue?** Provide clear information and reproducible steps
 
-- Initial release
-- Real-time documentation search
-- Multiple search categories
-- Natural language processing
-- MCP standard support
+## 📅 Changelog
+
+### v1.0.0 - 🎉 Initial Release
+
+- ✨ **Initial release** - Complete MCP server implementation
+- 🔍 **Real-time documentation search** - Fast access to MSFS SDK docs
+- 📚 **Multiple search categories** - Contents, index, glossary support
+- 🧠 **Natural language processing** - Intuitive query processing
+- 🔌 **MCP standard support** - Full compatibility
+- 💾 **Embedded data** - No external dependencies
 
 ---
 
-**Note:** This is an unofficial tool, not affiliated with Microsoft or Microsoft Flight Simulator. Provides access to public documentation via the official MSFS SDK website.
+## ⚠️ Disclaimer
 
-## Contact
+**This is an unofficial tool**, not affiliated with Microsoft or Microsoft Flight Simulator.
+Provides access to public documentation via the official MSFS SDK website.
 
-90barricade93  – All rights reserved – 2025
+🚀 **Happy Flying!** ✈️
+
+---
+
+<div align="center">
+
+![GitHub forks](https://img.shields.io/github/forks/90barricade93/MSFS_SDK_MCP) &ensp; © 90barricade93 - Aero-AI Solutions &ensp; ![GitHub stars](https://img.shields.io/github/stars/90barricade93/MSFS_SDK_MCP)
+
+</div>
