@@ -240,6 +240,10 @@ Provides access to public documentation via the official MSFS SDK website.
 
 <div align="center">
 
-![GitHub forks](https://img.shields.io/github/forks/90barricade93/MSFS_SDK_MCP) &ensp; © 90barricade93 - Aero-AI Solutions &ensp; ![GitHub stars](https://img.shields.io/github/stars/90barricade93/MSFS_SDK_MCP)
+[![GitHub forks](https://img.shields.io/github/forks/90barricade93/MSFS-SDK-MCP?style=social)](https://github.com/90barricade93/MSFS-SDK-MCP/fork)
+&ensp; 
+© 90barricade93 - aero-ai-solutions.com 
+&ensp; 
+[![GitHub stars](https://img.shields.io/github/stars/90barricade93/MSFS-SDK-MCP?style=social)](https://github.com/90barricade93/MSFS-SDK-MCP)
 
 </div>
