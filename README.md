@@ -8,6 +8,10 @@
 
 A modern, performant MCP server for fast, structured access to Microsoft Flight Simulator SDK documentation via natural language and structured queries.
 
+<a href="https://glama.ai/mcp/servers/@90barricade93/MSFS-SDK-MCP">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@90barricade93/MSFS-SDK-MCP/badge" alt="MSFS SDK Server MCP server" />
+</a>
+
 ## 🚀 Features
 
 - ⚡️ **Real-time documentation search** in the official MSFS SDK documentation
